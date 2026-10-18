@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nurse Blossom | Professional Online Office</title>
+<meta name="description" content="Nurse Blossom's professional online office: book a consultation, ask a health question, and get trusted nursing advice.">
+<style>
+  :root {
+    --ink: #12303a;
+    --paper: #f6fafa;
+    --blossom: #e8799b;
+    --blossom-soft: #fbe3ec;
+    --teal: #1f6f78;
+    --line: #cfe0e2;
+    --text: #1c2b30;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e6f2f3;
+      --paper: #0f1c20;
+      --blossom: #f08fae;
+      --blossom-soft: #2a1a21;
+      --teal: #6cc3cc;
+      --line: #25393e;
+      --text: #d7e5e7;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--paper);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; }
+  .brand { font-weight: 700; color: var(--ink); text-decoration: none; font-size: 1.1rem; }
+  nav a { margin-left: 16px; color: var(--teal); text-decoration: none; font-family: system-ui, sans-serif; font-size: .95rem; }
+  .hero { padding: 56px 0 40px; }
+  h1 { font-size: clamp(2rem, 8vw, 3rem); line-height: 1.15; margin: 0 0 16px; color: var(--ink); }
+  .lead { font-size: 1.15rem; margin: 0 0 28px; }
+  .btn {
+    display: inline-block; padding: 12px 22px; border-radius: 8px;
+    background: var(--blossom); color: #1a0d12; font-family: system-ui, sans-serif;
+    font-weight: 600; text-decoration: none;
+  }
+  section { padding: 36px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.5rem; color: var(--ink); margin: 0 0 14px; }
+  ul.services { list-style: none; padding: 0; margin: 0; }
+  ul.services li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  ul.services strong { color: var(--ink); display: block; }
+  .hours { background: var(--blossom-soft); padding: 16px 18px; border-radius: 8px; }
+  form { display: grid; gap: 14px; font-family: system-ui, sans-serif; }
+  label { display: grid; gap: 6px; font-size: .95rem; color: var(--ink); }
+  input, select, textarea {
+    font: inherit; padding: 11px 12px; border: 1px solid var(--line);
+    border-radius: 8px; background: var(--paper); color: var(--text);
+  }
+  button { font: inherit; cursor: pointer; border: 0; }
+  .note { font-family: system-ui, sans-serif; font-size: .85rem; }
+  footer { padding: 28px 0 40px; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Nurse Blossom</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#book">Book</a>
+    </nav>
+  </div>
+</header>
 
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <h1>Nursing care and advice, online.</h1>
+      <p class="lead">Book a consultation with Nurse Blossom and get clear, caring answers to your health questions without leaving home.</p>
+      <a class="btn" href="#book">Book a consultation</a>
+    </div>
+
+    <section id="services">
+      <h2>Services</h2>
+      <ul class="services">
+        <li><strong>Health consultation</strong>Talk through symptoms, medicines, or a new diagnosis.</li>
+        <li><strong>Wound and post-surgery care guidance</strong>Learn how to care for dressings and spot problems early.</li>
+        <li><strong>Chronic condition support</strong>Practical routines for diabetes, blood pressure, and more.</li>
+        <li><strong>Maternal and child health advice</strong>Support for new parents and growing families.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Office hours</h2>
+      <p class="hours">Monday to Friday, 9:00 to 17:00. Replace these hours with your own.</p>
+    </section>
+
+    <section id="book">
+      <h2>Book a consultation</h2>
+      <form action="mailto:YOUR-EMAIL@example.com" method="post" enctype="text/plain">
+        <label>Your name
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>Email or phone
+          <input type="text" name="contact" required autocomplete="email">
+        </label>
+        <label>What do you need help with?
+          <select name="topic">
+            <option>Health consultation</option>
+            <option>Wound care guidance</option>
+            <option>Chronic condition support</option>
+            <option>Maternal and child health</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Tell me more
+          <textarea name="message" rows="4"></textarea>
+        </label>
+        <button class="btn" type="submit">Send request</button>
+      </form>
+      <p class="note">In an emergency, call your local emergency number. Do not use this form.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap note">
+    &copy; 2026 Nurse Blossom. This site gives general information and is not a substitute for in-person medical care.
+  </div>
+</footer>
+</body>
+</html>
