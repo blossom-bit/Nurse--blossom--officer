@@ -1,135 +1,1117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nurse Blossom | Professional Online Office</title>
-<meta name="description" content="Nurse Blossom's professional online office: book a consultation, ask a health question, and get trusted nursing advice.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blossom Bliss and Bite | Online Store</title>
+
+<meta name="description" content="Shop delicious special shito, cakes, refreshing drinks and other quality products from Blossom Bliss and Bite.">
+
 <style>
-  :root {
-    --ink: #12303a;
-    --paper: #f6fafa;
-    --blossom: #e8799b;
-    --blossom-soft: #fbe3ec;
-    --teal: #1f6f78;
-    --line: #cfe0e2;
-    --text: #1c2b30;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --ink: #e6f2f3;
-      --paper: #0f1c20;
-      --blossom: #f08fae;
-      --blossom-soft: #2a1a21;
-      --teal: #6cc3cc;
-      --line: #25393e;
-      --text: #d7e5e7;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
+
+:root {
+    --pink: #d97991;
+    --darkpink: #a83f62;
+    --cream: #fff8f0;
+    --gold: #c49a45;
+    --dark: #38232b;
+    --white: #ffffff;
+}
+
+* {
     margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    background: var(--paper);
-    color: var(--text);
-    line-height: 1.65;
-  }
-  .wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
-  header { padding: 18px 0; border-bottom: 1px solid var(--line); }
-  header .wrap { display: flex; justify-content: space-between; align-items: center; }
-  .brand { font-weight: 700; color: var(--ink); text-decoration: none; font-size: 1.1rem; }
-  nav a { margin-left: 16px; color: var(--teal); text-decoration: none; font-family: system-ui, sans-serif; font-size: .95rem; }
-  .hero { padding: 56px 0 40px; }
-  h1 { font-size: clamp(2rem, 8vw, 3rem); line-height: 1.15; margin: 0 0 16px; color: var(--ink); }
-  .lead { font-size: 1.15rem; margin: 0 0 28px; }
-  .btn {
-    display: inline-block; padding: 12px 22px; border-radius: 8px;
-    background: var(--blossom); color: #1a0d12; font-family: system-ui, sans-serif;
-    font-weight: 600; text-decoration: none;
-  }
-  section { padding: 36px 0; border-top: 1px solid var(--line); }
-  h2 { font-size: 1.5rem; color: var(--ink); margin: 0 0 14px; }
-  ul.services { list-style: none; padding: 0; margin: 0; }
-  ul.services li { padding: 14px 0; border-bottom: 1px solid var(--line); }
-  ul.services strong { color: var(--ink); display: block; }
-  .hours { background: var(--blossom-soft); padding: 16px 18px; border-radius: 8px; }
-  form { display: grid; gap: 14px; font-family: system-ui, sans-serif; }
-  label { display: grid; gap: 6px; font-size: .95rem; color: var(--ink); }
-  input, select, textarea {
-    font: inherit; padding: 11px 12px; border: 1px solid var(--line);
-    border-radius: 8px; background: var(--paper); color: var(--text);
-  }
-  button { font: inherit; cursor: pointer; border: 0; }
-  .note { font-family: system-ui, sans-serif; font-size: .85rem; }
-  footer { padding: 28px 0 40px; border-top: 1px solid var(--line); }
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px #00000010;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--darkpink);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+.cart-button {
+    background: var(--darkpink);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 440px;
+    background:
+    linear-gradient(#32151a99, #32151a99),
+    url("https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 60px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: var(--gold);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--darkpink);
+}
+
+section {
+    padding: 65px 6%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: var(--darkpink);
+}
+
+.section-title p {
+    color: #777;
+}
+
+.about {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.about p {
+    margin-top: 15px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.category {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px #00000010;
+}
+
+.category h3 {
+    color: var(--darkpink);
+}
+
+.category a {
+    color: var(--darkpink);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.search-box {
+    max-width: 450px;
+    margin: 0 auto 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-buttons button {
+    padding: 10px 18px;
+    border: 1px solid var(--pink);
+    background: white;
+    color: var(--darkpink);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+    background: var(--darkpink);
+    color: white;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px #00000012;
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    color: var(--darkpink);
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.add-btn {
+    background: var(--darkpink);
+    color: white;
+    padding: 11px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: var(--pink);
+}
+
+.cart-panel {
+    position: fixed;
+    right: -420px;
+    top: 0;
+    width: min(400px, 100%);
+    height: 100vh;
+    background: white;
+    z-index: 300;
+    padding: 25px;
+    overflow-y: auto;
+    box-shadow: -5px 0 20px #00000020;
+    transition: .3s;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.close-btn {
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cart-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item button {
+    padding: 3px 8px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.cart-total {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.checkout {
+    width: 100%;
+    background: var(--darkpink);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#checkout-form {
+    display: none;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 4px 15px #00000015;
+}
+
+#checkout-form input,
+#checkout-form textarea,
+#checkout-form select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font: inherit;
+}
+
+#checkout-form label {
+    font-weight: bold;
+}
+
+.contact {
+    text-align: center;
+    background: #f8e4e9;
+}
+
+.contact p {
+    margin: 12px 0;
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer a {
+    color: #f5c8d4;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 200;
+}
+
+@media(max-width: 650px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+}
+
 </style>
 </head>
+
 <body>
+
 <header>
-  <div class="wrap">
-    <a class="brand" href="#top">Nurse Blossom</a>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#book">Book</a>
-    </nav>
-  </div>
+
+<div class="logo">
+🌸 BLOSSOM <span>BLISS & BITE</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#categories">Categories</a>
+<a href="#shop">Shop</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<button class="cart-button" onclick="toggleCart()">
+🛒 Cart (<span id="cart-count">0</span>)
+</button>
+
 </header>
 
-<main id="top">
-  <div class="wrap">
-    <div class="hero">
-      <h1>Nursing care and advice, online.</h1>
-      <p class="lead">Book a consultation with Nurse Blossom and get clear, caring answers to your health questions without leaving home.</p>
-      <a class="btn" href="#book">Book a consultation</a>
-    </div>
 
-    <section id="services">
-      <h2>Services</h2>
-      <ul class="services">
-        <li><strong>Health consultation</strong>Talk through symptoms, medicines, or a new diagnosis.</li>
-        <li><strong>Wound and post-surgery care guidance</strong>Learn how to care for dressings and spot problems early.</li>
-        <li><strong>Chronic condition support</strong>Practical routines for diabetes, blood pressure, and more.</li>
-        <li><strong>Maternal and child health advice</strong>Support for new parents and growing families.</li>
-      </ul>
-    </section>
+<!-- HOME -->
 
-    <section>
-      <h2>Office hours</h2>
-      <p class="hours">Monday to Saturday, 9:00am to 17:00pm. </p>
-    </section>
+<section class="hero" id="home">
 
-    <section id="book">
-      <h2>Book a consultation</h2><p><a class="btn" href="mailto:nanaefua.konadu@yahoo.ca">Email Nurse Blossom</a></p><p><a class="btn" href="tel:+233243233179">Call 024 323 3179</a></p>
-<p><a class="btn" <form action="mailto:nanaefua.konadu@yahoo.ca" method="post" enctype="text/plain">
-<form action="https://forms action="https://formspree.io/f/YOURCODE" method="POST">.
-          <input type="text" name="name" required autocomplete="name">
-        </label>
-        <label>Email or phone
-          <input type="text" name="contact" required autocomplete="email">
-        </label>
-        <label>What do you need help with?
-          <select name="topic">
-            <option>Health consultation</option>
-            <option>Wound care guidance</option>
-            <option>Chronic condition support</option>
-            <option>Maternal and child health</option>
-            <option>Something else</option>
-          </select>
-        </label>
-        <label>Tell me more
-          <textarea name="message" rows="4"></textarea>
-        </label>
-        <button class="btn" type="submit">Send request</button>
-      </form>
-      <p class="note">In an emergency, call your local emergency number. Do not use this form.</p>
-    </section>c
-  </div>
-</main>
+<div class="hero-content">
+
+<h1>Blossom Bliss and Bite</h1>
+
+<p>
+Deliciousness, Freshness and Quality in Every Bite.
+</p>
+
+<a href="#shop" class="btn">SHOP NOW</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-title">
+<h2>Welcome to Blossom Bliss and Bite</h2>
+</div>
+
+<div class="about">
+
+<p>
+Welcome to Blossom Bliss and Bite, your trusted destination
+for delicious special shito, beautifully crafted cakes,
+refreshing drinks and other quality products.
+</p>
+
+<p>
+We believe in quality, freshness, great taste and excellent
+customer service. Whether you are celebrating a special
+occasion or simply treating yourself, we have something
+special for you.
+</p>
+
+<p>
+Thank you for choosing Blossom Bliss and Bite!
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section id="categories">
+
+<div class="section-title">
+<h2>Explore Our Categories</h2>
+<p>Discover something delicious today.</p>
+</div>
+
+<div class="categories">
+
+<div class="category">
+<h3>🌶️ Special Shito</h3>
+<p>Delicious and flavourful shito.</p>
+<a href="#shop" onclick="filterProducts('Shito')">Shop Shito</a>
+</div>
+
+<div class="category">
+<h3>🎂 Cakes</h3>
+<p>Beautiful cakes for every occasion.</p>
+<a href="#shop" onclick="filterProducts('Cakes')">Shop Cakes</a>
+</div>
+
+<div class="category">
+<h3>🥤 Drinks</h3>
+<p>Refreshing drinks and beverages.</p>
+<a href="#shop" onclick="filterProducts('Drinks')">Shop Drinks</a>
+</div>
+
+<div class="category">
+<h3>🛍️ Other Products</h3>
+<p>Explore our other available products.</p>
+<a href="#shop" onclick="filterProducts('Other')">Explore</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section id="shop">
+
+<div class="section-title">
+
+<h2>Our Products</h2>
+
+<p>Browse our products and place your order.</p>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="search"
+id="search"
+placeholder="Search for shito, cakes, drinks..."
+oninput="displayProducts()"
+>
+
+</div>
+
+<div class="filter-buttons">
+
+<button class="active" onclick="filterProducts('All',this)">All Products</button>
+
+<button onclick="filterProducts('Shito',this)">Special Shito</button>
+
+<button onclick="filterProducts('Cakes',this)">Cakes</button>
+
+<button onclick="filterProducts('Drinks',this)">Drinks</button>
+
+<button onclick="filterProducts('Other',this)">Other Products</button>
+
+</div>
+
+<div class="products" id="products"></div>
+
+</section>
+
+
+<!-- CART -->
+
+<div class="cart-panel" id="cart">
+
+<div class="cart-header">
+
+<h2>🛒 Your Shopping Cart</h2>
+
+<button class="close-btn" onclick="toggleCart()">×</button>
+
+</div>
+
+<div id="cart-items"></div>
+
+<div class="cart-total" id="cart-total">
+Total: GH₵0.00
+</div>
+
+<button class="checkout" onclick="showCheckout()">
+PROCEED TO CHECKOUT
+</button>
+
+</div>
+
+
+<!-- CHECKOUT -->
+
+<section id="checkout-form">
+
+<div class="section-title">
+<h2>Complete Your Order</h2>
+<p>Enter your details below.</p>
+</div>
+
+<form onsubmit="placeOrder(event)">
+
+<label>Full Name</label>
+<input type="text" id="customer-name" required>
+
+<label>Phone Number</label>
+<input type="tel" id="customer-phone" required>
+
+<label>Delivery Location</label>
+<input type="text" id="customer-location" required>
+
+<label>Delivery Method</label>
+
+<select id="delivery-method">
+<option>Delivery</option>
+<option>Customer Pickup</option>
+</select>
+
+<label>Preferred Delivery Date</label>
+<input type="date" id="delivery-date">
+
+<label>Special Instructions</label>
+<textarea id="instructions" rows="4"
+placeholder="Cake design, flavour, size or other requests..."></textarea>
+
+<button type="submit" class="checkout">
+SEND ORDER THROUGH WHATSAPP
+</button>
+
+</form>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="section-title">
+<h2>Contact Blossom Bliss and Bite</h2>
+</div>
+
+<p>We would love to hear from you!</p>
+
+<p>📍 Ghana</p>
+
+<p>📱 WhatsApp: Add your business number</p>
+
+<p>📧 Email: Add your business email</p>
+
+<p>Follow us on social media for updates and promotions.</p>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-  <div class="wrap note">
-    &copy; 2026 Nurse Blossom.0243233179 This site gives general information and is not a substitute for in-person medical care.
-  </div>
+
+<h2>🌸 BLOSSOM BLISS AND BITE</h2>
+
+<p>Quality, Freshness and Deliciousness in Every Bite.</p>
+
+<p>© <span id="year"></span> Blossom Bliss and Bite. All Rights Reserved.</p>
+
 </footer>
+
+
+<a class="whatsapp"
+id="whatsapp-link"
+href="#"
+target="_blank">
+WhatsApp Us
+</a>
+
+
+<script>
+
+/*
+=========================================
+BLOSSOM BLISS AND BITE SETTINGS
+=========================================
+
+IMPORTANT:
+Replace the WhatsApp number below with your
+business number, including Ghana country code 233.
+
+Example: 233241234567
+
+Do not include + or spaces.
+*/
+
+const WHATSAPP_NUMBER = "233XXXXXXXXX";
+
+
+/*
+=========================================
+PRODUCT CATALOGUE
+=========================================
+
+Change the sample products, prices and images
+to your actual business products.
+
+Prices are initially GH₵0 because your actual
+prices have not yet been supplied.
+
+*/
+
+const products = [
+
+{
+id: 1,
+name: "Blossom Special Shito",
+category: "Shito",
+description: "Our delicious special shito.",
+price: 0,
+image: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=700&q=80"
+},
+
+{
+id: 2,
+name: "Assorted Shito",
+category: "Shito",
+description: "Flavourful assorted shito.",
+price: 0,
+image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+},
+
+{
+id: 3,
+name: "Birthday Cake",
+category: "Cakes",
+description: "Beautiful birthday cakes made to order.",
+price: 0,
+image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80"
+},
+
+{
+id: 4,
+name: "Wedding Cake",
+category: "Cakes",
+description: "Elegant cakes for your special day.",
+price: 0,
+image: "https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=700&q=80"
+},
+
+{
+id: 5,
+name: "Cupcakes",
+category: "Cakes",
+description: "Delicious cupcakes for every occasion.",
+price: 0,
+image: "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=80"
+},
+
+{
+id: 6,
+name: "Refreshing Natural Drinks",
+category: "Drinks",
+description: "Refreshing drinks for every occasion.",
+price: 0,
+image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80"
+},
+
+{
+id: 7,
+name: "Fresh Fruit Juice",
+category: "Drinks",
+description: "Enjoy refreshing fruit juice.",
+price: 0,
+image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=700&q=80"
+},
+
+{
+id: 8,
+name: "Other Delicious Products",
+category: "Other",
+description: "Ask us about our other available products.",
+price: 0,
+image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=700&q=80"
+}
+
+];
+
+
+let cart = JSON.parse(localStorage.getItem("blossomCart") || "[]");
+
+let currentCategory = "All";
+
+
+function money(amount) {
+    return "GH₵" + Number(amount).toFixed(2);
+}
+
+
+function displayProducts() {
+
+    const container = document.getElementById("products");
+
+    const search = document.getElementById("search").value.toLowerCase();
+
+    const filtered = products.filter(product => {
+
+        const matchesCategory =
+            currentCategory === "All" ||
+            product.category === currentCategory;
+
+        const matchesSearch =
+            product.name.toLowerCase().includes(search) ||
+            product.description.toLowerCase().includes(search);
+
+        return matchesCategory && matchesSearch;
+
+    });
+
+    container.innerHTML = "";
+
+    if (filtered.length === 0) {
+        container.innerHTML = "<p>No products found.</p>";
+        return;
+    }
+
+    filtered.forEach(product => {
+
+        container.innerHTML += `
+
+        <div class="product">
+
+            <img
+                src="${product.image}"
+                alt="${product.name}"
+                loading="lazy"
+            >
+
+            <div class="product-info">
+
+                <h3>${product.name}</h3>
+
+                <p>${product.description}</p>
+
+                <div class="price">
+                    ${product.price > 0
+                        ? money(product.price)
+                        : "Price to be confirmed"}
+                </div>
+
+                <button class="add-btn"
+                    onclick="addToCart(${product.id})">
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+function filterProducts(category, button) {
+
+    currentCategory = category;
+
+    document.querySelectorAll(".filter-buttons button")
+        .forEach(btn => btn.classList.remove("active"));
+
+    if (button) {
+        button.classList.add("active");
+    }
+
+    displayProducts();
+
+}
+
+
+function saveCart() {
+
+    localStorage.setItem("blossomCart", JSON.stringify(cart));
+
+    updateCart();
+
+}
+
+
+function addToCart(id) {
+
+    const product = products.find(p => p.id === id);
+
+    const existing = cart.find(item => item.id === id);
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push({
+            id: product.id,
+            quantity: 1
+        });
+    }
+
+    saveCart();
+
+    alert(product.name + " added to your cart!");
+
+}
+
+
+function updateCart() {
+
+    const container = document.getElementById("cart-items");
+
+    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    document.getElementById("cart-count").textContent = count;
+
+    container.innerHTML = "";
+
+    let total = 0;
+
+    cart.forEach(item => {
+
+        const product = products.find(p => p.id === item.id);
+
+        if (!product) return;
+
+        total += product.price * item.quantity;
+
+        container.innerHTML += `
+
+        <div class="cart-item">
+
+            <strong>${product.name}</strong>
+
+            <p>${product.price > 0
+                ? money(product.price)
+                : "Price to be confirmed"}</p>
+
+            <button onclick="changeQuantity(${item.id},-1)">−</button>
+
+            ${item.quantity}
+
+            <button onclick="changeQuantity(${item.id},1)">+</button>
+
+            <button onclick="removeItem(${item.id})">Remove</button>
+
+        </div>
+
+        `;
+
+    });
+
+    document.getElementById("cart-total").textContent =
+        "Total: " + money(total);
+
+}
+
+
+function changeQuantity(id, change) {
+
+    const item = cart.find(p => p.id === id);
+
+    if (!item) return;
+
+    item.quantity += change;
+
+    if (item.quantity <= 0) {
+        cart = cart.filter(p => p.id !== id);
+    }
+
+    saveCart();
+
+}
+
+
+function removeItem(id) {
+
+    cart = cart.filter(item => item.id !== id);
+
+    saveCart();
+
+}
+
+
+function toggleCart() {
+
+    document.getElementById("cart")
+        .classList.toggle("open");
+
+}
+
+
+function showCheckout() {
+
+    if (cart.length === 0) {
+        alert("Your shopping cart is empty.");
+        return;
+    }
+
+    document.getElementById("cart").classList.remove("open");
+
+    const form = document.getElementById("checkout-form");
+
+    form.style.display = "block";
+
+    form.scrollIntoView({behavior: "smooth"});
+
+}
+
+
+function placeOrder(event) {
+
+    event.preventDefault();
+
+    if (cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+    }
+
+    if (!/^233\d{9}$/.test(WHATSAPP_NUMBER)) {
+
+        alert("Please update the business WhatsApp number in the website code before accepting orders.");
+
+        return;
+    }
+
+    const name = document.getElementById("customer-name").value;
+
+    const phone = document.getElementById("customer-phone").value;
+
+    const location = document.getElementById("customer-location").value;
+
+    const delivery = document.getElementById("delivery-method").value;
+
+    const date = document.getElementById("delivery-date").value;
+
+    const instructions = document.getElementById("instructions").value;
+
+    let total = 0;
+
+    let order = "🌸 *NEW BLOSSOM BLISS AND BITE ORDER* 🌸\n\n";
+
+    order += "*Customer:* " + name + "\n";
+
+    order += "*Phone:* " + phone + "\n";
+
+    order += "*Location:* " + location + "\n";
+
+    order += "*Method:* " + delivery + "\n";
+
+    order += "*Preferred Date:* " + (date || "To be agreed") + "\n\n";
+
+    order += "*ORDER DETAILS*\n";
+
+    cart.forEach(item => {
+
+        const product = products.find(p => p.id === item.id);
+
+        total += product.price * item.quantity;
+
+        order += product.name +
+            " x " + item.quantity +
+            " - " +
+            (product.price > 0
+                ? money(product.price * item.quantity)
+                : "Price to be confirmed") +
+            "\n";
+
+    });
+
+    order += "\n*Estimated Total:* " +
+        (cart.every(item =>
+            products.find(p => p.id === item.id).price > 0
+        ) ? money(total) : "Price to be confirmed");
+
+    order += "\n\n*Special Instructions:* " +
+        (instructions || "None");
+
+    order += "\n\nThank you for choosing Blossom Bliss and Bite!";
+
+    const url = "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(order);
+
+    window.open(url, "_blank");
+
+    cart = [];
+
+    saveCart();
+
+}
+
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+document.getElementById("whatsapp-link").href =
+    "https://wa.me/" + WHATSAPP_NUMBER;
+
+
+displayProducts();
+
+updateCart();
+
+</script>
+
 </body>
 </html>
